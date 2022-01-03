@@ -1,0 +1,141 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyNA15DxpmTYKVXQbXRqP0sY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JuRxY/gitHubNew/blob/main/Hand%20written%20numbers%20recognition\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 16,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zndp1SN-V7Tu",
+        "outputId": "80efcf60-0ac2-45b2-f324-d92ea81abb36"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Epoch 1/30\n",
+            "1875/1875 [==============================] - 5s 2ms/step - loss: 0.3096 - accuracy: 0.9154\n",
+            "Epoch 2/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.1416 - accuracy: 0.9583\n",
+            "Epoch 3/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0975 - accuracy: 0.9714\n",
+            "Epoch 4/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0734 - accuracy: 0.9780\n",
+            "Epoch 5/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0566 - accuracy: 0.9827\n",
+            "Epoch 6/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0450 - accuracy: 0.9869\n",
+            "Epoch 7/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0352 - accuracy: 0.9896\n",
+            "Epoch 8/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0285 - accuracy: 0.9918\n",
+            "Epoch 9/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0229 - accuracy: 0.9933\n",
+            "Epoch 10/30\n",
+            "1875/1875 [==============================] - 5s 2ms/step - loss: 0.0182 - accuracy: 0.9949\n",
+            "Epoch 11/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0149 - accuracy: 0.9960\n",
+            "Epoch 12/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0116 - accuracy: 0.9972\n",
+            "Epoch 13/30\n",
+            "1875/1875 [==============================] - 5s 3ms/step - loss: 0.0098 - accuracy: 0.9976\n",
+            "Epoch 14/30\n",
+            "1875/1875 [==============================] - 5s 2ms/step - loss: 0.0075 - accuracy: 0.9984\n",
+            "Epoch 15/30\n",
+            "1875/1875 [==============================] - 5s 3ms/step - loss: 0.0073 - accuracy: 0.9980\n",
+            "Epoch 16/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0058 - accuracy: 0.9988\n",
+            "Epoch 17/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0046 - accuracy: 0.9990\n",
+            "Epoch 18/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0046 - accuracy: 0.9989\n",
+            "Epoch 19/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0033 - accuracy: 0.9992\n",
+            "Epoch 20/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0031 - accuracy: 0.9993\n",
+            "Epoch 21/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0029 - accuracy: 0.9994\n",
+            "Epoch 22/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0030 - accuracy: 0.9994\n",
+            "Epoch 23/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0026 - accuracy: 0.9994\n",
+            "Epoch 24/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0020 - accuracy: 0.9995\n",
+            "Epoch 25/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0032 - accuracy: 0.9991\n",
+            "Epoch 26/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0018 - accuracy: 0.9995\n",
+            "Epoch 27/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0013 - accuracy: 0.9998\n",
+            "Epoch 28/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 3.4967e-04 - accuracy: 1.0000\n",
+            "Epoch 29/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 0.0045 - accuracy: 0.9988\n",
+            "Epoch 30/30\n",
+            "1875/1875 [==============================] - 4s 2ms/step - loss: 6.0213e-04 - accuracy: 1.0000\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<keras.callbacks.History at 0x7f8c41f46890>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ],
+      "source": [
+        "import tensorflow as tf\n",
+        "\n",
+        "mnist= tf.keras.datasets.mnist #0-9 hand written numbers\n",
+        "\n",
+        "(x_train, y_train), (x_test, y_test) = mnist.load_data()\n",
+        "\n",
+        "x_train = tf.keras.utils.normalize(x_train, axis=1)\n",
+        "y_test = tf.keras.utils.normalize(x_test, axis=1)\n",
+        "\n",
+        "model = tf.keras.models.Sequential()\n",
+        "model.add(tf.keras.layers.Flatten())\n",
+        "model.add(tf.keras.layers.Dense(128, activation=tf.nn.relu))\n",
+        "model.add(tf.keras.layers.Dense(10, activation=tf.nn.softmax))\n",
+        "\n",
+        "model.compile(optimizer='adam',\n",
+        "              loss='sparse_categorical_crossentropy',\n",
+        "              metrics=['accuracy'])\n",
+        "model.fit(x_train, y_train, epochs=30)"
+      ]
+    }
+  ]
+}
